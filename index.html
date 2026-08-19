@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+content="width=device-width, initial-scale=1.0">
+    <title>MikaelaArchive</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #ffd6e7;
+            color: #333;
+        }
+
+        nav {
+            background: #ff4f91;
+            padding: 18px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        .home {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .home-content {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .home-content img {
+            width: 220px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 18px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ff3f86;
+            margin-bottom: 10px;
+        }
+
+        .jiko {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        section {
+            padding: 70px 25px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #ff3f86;
+            margin-bottom: 25px;
+        }
+
+        .profile {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 18px;
+            text-align: left;
+        }
+
+        .profile p {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .gallery div {
+            background: white;
+            height: 180px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+        }
+
+        .social a {
+            display: inline-block;
+            background: #ff4f91;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 25px;
+        }
+
+        footer {
+            background: #ff4f91;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#profile">Profile Mikaela</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#social">Social Media</a>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <img src="https://via.placeholder.com/220x280" alt="Foto Mikaela">
+
+            <h1>MikaelaArchive</h1>
+
+            <p class="jiko">
+                Jiko Mikaela akan ditulis di sini.
+            </p>
+
+            <p style="margin-top: 15px;">
+                Fanpage dan arsip sederhana untuk Mikaela JKT48.
+            </p>
+        </div>
+    </section>
+
+    <section id="profile">
+        <h2>Profile Mikaela</h2>
+
+        <div class="profile">
+            <p><strong>Nama lengkap:</strong> Akan diisi</p>
+            <p><strong>Nama panggilan:</strong> Mikaela</p>
+            <p><strong>Tanggal lahir:</strong> Akan diisi</p>
+            <p><strong>Makanan favorit:</strong> Akan diisi</p>
+            <p><strong>Warna favorit:</strong> Akan diisi</p>
+            <p><strong>Hobi:</strong> Akan diisi</p>
+            <p><strong>Hal yang disukai:</strong> Akan diisi</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+
+        <div class="gallery">
+            <div>Foto 1</div>
+            <div>Foto 2</div>
+            <div>Foto 3</div>
+            <div>Foto 4</div>
+            <div>Foto 5</div>
+            <div>Foto 6</div>
+        </div>
+    </section>
+
+    <section id="social">
+        <h2>Social Media</h2>
+
+        <div class="social">
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">TikTok</a>
+            <a href="#" target="_blank">X</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MikaelaArchive</p>
+    </footer>
+
+</body>
+</html>
