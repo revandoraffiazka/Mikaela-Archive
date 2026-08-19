@@ -2,8 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MikaelaArchive</title>
 
     <style>
@@ -14,6 +13,10 @@ content="width=device-width, initial-scale=1.0">
             font-family: Arial, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background: #ffd6e7;
             color: #333;
@@ -21,17 +24,23 @@ content="width=device-width, initial-scale=1.0">
 
         nav {
             background: #ff4f91;
-            padding: 18px;
+            padding: 18px 10px;
             text-align: center;
             position: sticky;
             top: 0;
+            z-index: 100;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 12px;
+            margin: 0 10px;
             font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         .home {
@@ -39,45 +48,54 @@ content="width=device-width, initial-scale=1.0">
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 30px;
+            padding: 35px 20px;
         }
 
         .home-content {
             background: white;
-            padding: 35px;
-            border-radius: 20px;
+            padding: 35px 25px;
+            border-radius: 25px;
             max-width: 700px;
             width: 100%;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
         .home-content img {
             width: 220px;
             height: 280px;
             object-fit: cover;
-            border-radius: 18px;
+            border-radius: 20px;
             margin-bottom: 20px;
         }
 
         h1 {
             color: #ff3f86;
-            margin-bottom: 10px;
+            font-size: 32px;
+            margin-bottom: 12px;
         }
 
         .jiko {
             font-size: 18px;
-            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #777;
+            line-height: 1.6;
         }
 
         section {
-            padding: 70px 25px;
+            padding: 70px 20px;
             text-align: center;
         }
 
         section h2 {
             color: #ff3f86;
             margin-bottom: 25px;
+            font-size: 28px;
         }
 
         .profile {
@@ -85,13 +103,18 @@ content="width=device-width, initial-scale=1.0">
             max-width: 600px;
             margin: auto;
             padding: 25px;
-            border-radius: 18px;
+            border-radius: 20px;
             text-align: left;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
 
         .profile p {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #eee;
+        }
+
+        .profile p:last-child {
+            border-bottom: none;
         }
 
         .gallery {
@@ -110,6 +133,7 @@ content="width=device-width, initial-scale=1.0">
             justify-content: center;
             align-items: center;
             color: #999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
         .social a {
@@ -117,9 +141,14 @@ content="width=device-width, initial-scale=1.0">
             background: #ff4f91;
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 13px 25px;
             margin: 8px;
             border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .social a:hover {
+            background: #e83b7d;
         }
 
         footer {
@@ -142,6 +171,7 @@ content="width=device-width, initial-scale=1.0">
 
     <section class="home" id="home">
         <div class="home-content">
+
             <img src="WhatsApp Image 2026-08-19 at 19.24.06.jpeg" alt="Foto Mikaela">
 
             <h1>MikaelaArchive</h1>
@@ -150,9 +180,12 @@ content="width=device-width, initial-scale=1.0">
                 Jiko Mikaela akan ditulis di sini.
             </p>
 
-            <p style="margin-top: 15px;">
-                Fanpage dan arsip sederhana untuk Mikaela JKT48.
+            <p class="description">
+                Selamat datang di MikaelaArchive,
+                tempat untuk mengenal dan mengabadikan
+                berbagai momen Mikaela.
             </p>
+
         </div>
     </section>
 
