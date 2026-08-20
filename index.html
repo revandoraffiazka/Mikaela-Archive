@@ -3,32 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mikaela Fanpage</title>
+
+    <title>Mikaela JKT48</title>
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        html {
             scroll-behavior: smooth;
         }
 
         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
             background: #ffd6e7;
             color: #333;
         }
 
         nav {
-            background: #ff4f91;
-            padding: 18px 10px;
-            text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
+            background: #ff4f91;
+            padding: 15px;
+            text-align: center;
         }
 
         nav a {
@@ -36,114 +33,124 @@
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
-            font-size: 14px;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
-        .home {
-            min-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 35px 20px;
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px 20px;
         }
 
-        .home-content {
+        .card {
             background: white;
-            padding: 35px 25px;
-            border-radius: 25px;
-            max-width: 700px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .home-content img {
-            width: 220px;
-            height: 280px;
-            object-fit: cover;
+            padding: 25px;
             border-radius: 20px;
-            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        h1 {
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #ff4f91;
+        }
+
+        h1, h2 {
             color: #ff3f86;
-            font-size: 32px;
-            margin-bottom: 15px;
         }
 
         .jiko {
-            font-size: 18px;
-            font-weight: bold;
-            color: #555;
+            font-style: italic;
+            margin-top: 15px;
             line-height: 1.6;
         }
 
-        section {
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            color: #ff3f86;
-            margin-bottom: 25px;
-            font-size: 28px;
-        }
-
-        .profile {
+        /* PROFILE */
+        .profile-card {
             background: white;
-            max-width: 600px;
-            margin: auto;
             padding: 25px;
             border-radius: 20px;
-            text-align: left;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .profile p {
-            padding: 12px 0;
+        .profile-card p {
+            padding: 10px 0;
+            margin: 0;
             border-bottom: 1px solid #eee;
         }
 
-        .profile p:last-child {
-            border-bottom: none;
+        /* GALLERY */
+        .gallery-category {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-category h3 {
+            color: #ff3f86;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            max-width: 900px;
-            margin: auto;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
         }
 
-        .gallery div {
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.04);
+        }
+
+        /* SOCIAL MEDIA */
+        .social-category {
             background: white;
-            height: 180px;
-            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .social-category h3 {
+            color: #ff3f86;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .social {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #999;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            flex-direction: column;
+            gap: 12px;
         }
 
         .social a {
-            display: inline-block;
             background: #ff4f91;
             color: white;
             text-decoration: none;
-            padding: 13px 25px;
-            margin: 8px;
-            border-radius: 25px;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
             font-weight: bold;
         }
 
         .social a:hover {
-            background: #e83b7d;
+            background: #ff3f86;
         }
 
         footer {
@@ -151,12 +158,27 @@
             color: white;
             text-align: center;
             padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* HP */
+        @media (max-width: 700px) {
+            nav a {
+                display: inline-block;
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <nav>
         <a href="#home">Home</a>
         <a href="#profile">Profile Mikaela</a>
@@ -164,60 +186,205 @@
         <a href="#social">Social Media</a>
     </nav>
 
-    <section class="home" id="home">
-        <div class="home-content">
 
-            <img src="WhatsApp Image 2026-08-19 at 19.24.06.jpeg" alt="Foto Mikaela">
+    <!-- HOME -->
+    <section id="home">
+        <div class="card">
 
-            <h1>Welcome To Mikaela Fanpage</h1>
+            <img src="WhatsApp Image 2026-08-19 at 19.24.06.jpeg"
+                 alt="Mikaela JKT48"
+                 class="profile-img">
+
+            <h1>Mikaela JKT48</h1>
 
             <p class="jiko">
-                Camera, Roll, Action! Sutradara yang akan mewarnai kisah hidupmu dengan penuh warna.
+                Camera, Roll, Action!<br>
+                Sutradara yang akan mewarnai kisah hidupmu dengan penuh warna.
                 Hai, aku Mikaela!
             </p>
 
         </div>
     </section>
 
+
+    <!-- PROFILE -->
     <section id="profile">
+
         <h2>Profile Mikaela</h2>
 
-        <div class="profile">
+        <div class="profile-card">
+
             <p><strong>Nama lengkap:</strong> Mikaela Kusjanto</p>
             <p><strong>Nama panggilan:</strong> Mikaela</p>
             <p><strong>Tanggal lahir:</strong> 15 Desember 2007</p>
-            <p><strong>Tinggi:</strong> 166 cm</p>
-            <p><strong>Makanan favorit:</strong> -</p>
+            <p><strong>Tinggi badan:</strong> 166 cm</p>
+            <p><strong>Zodiak:</strong> Sagitarius</p>
+            <p><strong>Golongan darah:</strong> O</p>
+            <p><strong>Makanan favorit:</strong> —</p>
             <p><strong>Warna favorit:</strong> Navy</p>
-            <p><strong>Hobi:</strong> Menonton Film</p>
+            <p><strong>Hobi:</strong> Menonton film dan menyanyi</p>
+
         </div>
+
     </section>
 
+
+    <!-- GALLERY -->
     <section id="gallery">
-        <h2>Gallery</h2>
 
-        <div class="gallery">
-            <div>Foto 1</div>
-            <div>Foto 2</div>
-            <div>Foto 3</div>
-            <div>Foto 4</div>
-            <div>Foto 5</div>
-            <div>Foto 6</div>
+        <h2>Gallery Mikaela</h2>
+
+
+        <!-- REQUEST HOUR -->
+        <div class="gallery-category">
+            <h3>Request Hour 2026</h3>
+
+            <div class="gallery">
+                <img src="request-hour-01.jpg" alt="Request Hour 2026">
+                <img src="request-hour-02.jpg" alt="Request Hour 2026">
+                <img src="request-hour-03.jpg" alt="Request Hour 2026">
+                <img src="request-hour-04.jpg" alt="Request Hour 2026">
+                <img src="request-hour-05.jpg" alt="Request Hour 2026">
+                <img src="request-hour-06.jpg" alt="Request Hour 2026">
+                <img src="request-hour-07.jpg" alt="Request Hour 2026">
+                <img src="request-hour-08.jpg" alt="Request Hour 2026">
+                <img src="request-hour-09.jpg" alt="Request Hour 2026">
+                <img src="request-hour-10.jpg" alt="Request Hour 2026">
+            </div>
         </div>
+
+
+        <!-- SAKURA MATSURI -->
+        <div class="gallery-category">
+            <h3>Sakura Matsuri Cikarang 2026</h3>
+
+            <div class="gallery">
+                <img src="sakura-01.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-02.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-03.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-04.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-05.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-06.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-07.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-08.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-09.jpg" alt="Sakura Matsuri Cikarang 2026">
+                <img src="sakura-10.jpg" alt="Sakura Matsuri Cikarang 2026">
+            </div>
+        </div>
+
+
+        <!-- THEATER -->
+        <div class="gallery-category">
+            <h3>Theater Show</h3>
+
+            <div class="gallery">
+                <img src="theater-01.jpg" alt="Theater Show">
+                <img src="theater-02.jpg" alt="Theater Show">
+                <img src="theater-03.jpg" alt="Theater Show">
+                <img src="theater-04.jpg" alt="Theater Show">
+                <img src="theater-05.jpg" alt="Theater Show">
+                <img src="theater-06.jpg" alt="Theater Show">
+                <img src="theater-07.jpg" alt="Theater Show">
+                <img src="theater-08.jpg" alt="Theater Show">
+                <img src="theater-09.jpg" alt="Theater Show">
+                <img src="theater-10.jpg" alt="Theater Show">
+            </div>
+        </div>
+
+
+        <!-- RANDOM PHOTOS -->
+        <div class="gallery-category">
+            <h3>Mikaela's Random Photos</h3>
+
+            <div class="gallery">
+                <img src="random-01.jpg" alt="Mikaela's Random Photos">
+                <img src="random-02.jpg" alt="Mikaela's Random Photos">
+                <img src="random-03.jpg" alt="Mikaela's Random Photos">
+                <img src="random-04.jpg" alt="Mikaela's Random Photos">
+                <img src="random-05.jpg" alt="Mikaela's Random Photos">
+                <img src="random-06.jpg" alt="Mikaela's Random Photos">
+                <img src="random-07.jpg" alt="Mikaela's Random Photos">
+                <img src="random-08.jpg" alt="Mikaela's Random Photos">
+                <img src="random-09.jpg" alt="Mikaela's Random Photos">
+                <img src="random-10.jpg" alt="Mikaela's Random Photos">
+            </div>
+        </div>
+
+
+        <!-- GEN 13 -->
+        <div class="gallery-category">
+            <h3>GEN 13 Family</h3>
+
+            <div class="gallery">
+                <img src="gen13-01.jpg" alt="GEN 13 Family">
+                <img src="gen13-02.jpg" alt="GEN 13 Family">
+                <img src="gen13-03.jpg" alt="GEN 13 Family">
+                <img src="gen13-04.jpg" alt="GEN 13 Family">
+                <img src="gen13-05.jpg" alt="GEN 13 Family">
+                <img src="gen13-06.jpg" alt="GEN 13 Family">
+                <img src="gen13-07.jpg" alt="GEN 13 Family">
+                <img src="gen13-08.jpg" alt="GEN 13 Family">
+                <img src="gen13-09.jpg" alt="GEN 13 Family">
+                <img src="gen13-10.jpg" alt="GEN 13 Family">
+            </div>
+        </div>
+
     </section>
 
+
+    <!-- SOCIAL MEDIA -->
     <section id="social">
+
         <h2>Social Media</h2>
 
-        <div class="social">
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">TikTok</a>
-            <a href="#" target="_blank">X</a>
+
+        <!-- MIKAELA -->
+        <div class="social-category">
+
+            <h3>Mikaela</h3>
+
+            <div class="social">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">TikTok</a>
+                <a href="#" target="_blank">X</a>
+            </div>
+
         </div>
+
+
+        <!-- OFFICIAL FANBASE -->
+        <div class="social-category">
+
+            <h3>Official Fanbase</h3>
+
+            <div class="social">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">TikTok</a>
+                <a href="#" target="_blank">X</a>
+            </div>
+
+        </div>
+
+
+        <!-- JKT48 -->
+        <div class="social-category">
+
+            <h3>JKT48</h3>
+
+            <div class="social">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">TikTok</a>
+                <a href="#" target="_blank">X</a>
+            </div>
+
+        </div>
+
     </section>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Mikaela Fanpage</p>
+        © 2026 Mikaela JKT48
     </footer>
 
 </body>
